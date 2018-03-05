@@ -15,8 +15,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://liberalcoins.com/img/monero_small_logo.png">
 
     <!-- Theme Css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/template/animate.css">
-    <link rel="stylesheet" href="./css/template/bootstrap.min.css">
     <link rel="stylesheet" href="./css/template/custom.css">
     <link rel="stylesheet" href="./css/template/dzsparallaxer.css">
     <link rel="stylesheet" href="./css/template/font-awesome.min.css">
@@ -33,13 +33,13 @@
     <!-- END Theme Css -->
 
     <!-- custom css -->
-    <link rel="stylesheet" href="/css/application.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="./css/application.css">
+    <link rel="stylesheet" href="./css/index.css">
     <!-- END custom css -->
 
 
-    <link rel="stylesheet" href="/assets/fonts/icon-line/css/simple-line-icons.css">
-    <link rel="stylesheet" href="/assets/fonts/icon-line-pro/style.css">
+    <link rel="stylesheet" href="./assets/fonts/icon-line/css/simple-line-icons.css">
+    <link rel="stylesheet" href="./assets/fonts/icon-line-pro/style.css">
 
     <!-- Required Meta Tags Always Come First -->
     <meta charset="utf-8">
@@ -73,7 +73,7 @@
           <!-- End Responsive Toggle Button -->
 
           <!-- Logo -->
-          <a href="/" class="navbar-brand">
+          <a href="./index.html" class="navbar-brand">
             <img src=" https://s3-eu-west-1.amazonaws.com/public-localmonero-storage/localmonero_banner.png " alt="Localmonero logo" style="height:50px;">
           </a>
           <!-- End Logo -->
@@ -82,7 +82,7 @@
           <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg" id="navBar">
             <ul class="navbar-nav text-uppercase g-font-weight-600 ml-auto">
               <li class="nav-item g-mx-20--lg">
-                <a href="/liberalcoins" class="nav-link px-0">Liberalcoins</a>
+                <a href="./liberalcoins.html" class="nav-link px-0">Liberalcoins</a>
               </li>
               <li class="nav-item g-mx-20--lg">
                 <a href="#!" class="nav-link px-0">Features</a>
@@ -189,12 +189,9 @@ $(document).on('page:change', function() {
 
 <!-- JS Plugins Init. -->
 <script>
-
-
-
-$(document).on('page:change', function() {
-    // initialization of header
-    $.HSCore.components.HSHeader.init($('#js-header'));
-    $.HSCore.helpers.HSHamburgers.init('.hamburger');
-  });
+$( document ).ready(function() {
+  // initialization of header
+  $.HSCore.components.HSHeader.init($('#js-header'));
+  $.HSCore.helpers.HSHamburgers.init('.hamburger');
+});
 </script>
