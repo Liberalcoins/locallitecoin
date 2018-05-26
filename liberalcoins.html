@@ -69,6 +69,21 @@
     <!-- Google Fonts -->
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,500,600,700%7Csubset=cyrillic,latin" rel="stylesheet" type="text/css">
 
+    <!-- Piwik -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//slangelibc.piwikpro.com/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 15]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="//slangelibc.piwikpro.com/piwik.php?idsite=15" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
   </head>
 
   <main>
@@ -116,26 +131,6 @@
 
 
   <body>
-    <!-- Piwik -->
-    <script type="text/javascript">
-      var _paq = _paq || [];
-      _paq.push(['setCustomUrl', document.location]);
-      _paq.push(['setDocumentTitle', document.title]);
-      _paq.push(["setDomains", ["*.liberalcoins.com","*.localhost"]]);
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="https://slangelibc.piwikpro.com/";
-        _paq.push(['setTrackerUrl', u+'piwik.php']);
-        _paq.push(['setSiteId', 15]);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-      })();
-    </script>
-    <noscript><p><img src="//slangelibc.piwikpro.com/piwik.php?idsite=15" style="border:0;" alt="" /></p></noscript>
-    <!-- End Piwik Code -->
-
-
     <!-- START BODY YIELD PAGE -->
 
     <!-- Promo Block -->
@@ -307,22 +302,6 @@
 <script  src="./js/unify_libs/used/hs.modal-window.js"></script>
 
 <!-- Stop Template JS -->
-
-
-
-
-<!-- Second Piwik script -->
-<script>
-$(document).on('page:change', function() {
-  if (window._paq != null) {
-    return _paq.push(['trackPageView']);
-  } else if (window.piwikTracker != null) {
-    return piwikTracker.trackPageview();
-  }
-});
-</script>
-
-<!-- Second Piwik script finish -->
 
 
 <!-- JS Plugins Init. -->
