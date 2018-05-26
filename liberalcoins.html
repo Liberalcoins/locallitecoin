@@ -45,6 +45,7 @@
     <link rel="stylesheet" href="./css/template/typed.css">
     <link rel="stylesheet" href="./css/template/unify.css">
     <link rel="stylesheet" href="./css/template/custom.css">
+    <link  rel="stylesheet" href="./css/template/custombox.min.css">
     <!-- END Theme Css -->
 
     <!-- custom css -->
@@ -150,15 +151,31 @@
     </div>
 
     <div class="">
-    	<a class="js-go-to btn u-btn-outline-white g-min-width-170 g-color-white g-bg-white-opacity-0_1 g-color-black--hover g-bg-white--hover g-font-weight-600 text-uppercase rounded g-px-30 g-py-13 mx-3 g-mb-30" href="" data-target="#main">Watch their video</a>
-      <a class="js-go-to btn u-btn-outline-white g-min-width-170 g-color-white g-bg-white-opacity-0_1 g-color-black--hover g-bg-white--hover g-font-weight-600 text-uppercase rounded g-px-30 g-py-13 mx-3 g-mb-30" href="https://liberalcoins.com" data-target="#main">Visit Liberalcoins.com</a>
+    	<a href="#" class="js-go-to btn u-btn-outline-white g-min-width-170 g-color-white g-bg-white-opacity-0_1 g-color-black--hover g-bg-white--hover g-font-weight-600 text-uppercase rounded g-px-30 g-py-13 mx-3 g-mb-30" data-toggle="modal" data-target="#libc-promo-modal-lg">Watch their video</a>
+      <a class="js-go-to btn u-btn-outline-white g-min-width-170 g-color-white g-bg-white-opacity-0_1 g-color-black--hover g-bg-white--hover g-font-weight-600 text-uppercase rounded g-px-30 g-py-13 mx-3 g-mb-30" href="https://liberalcoins.com">Visit Liberalcoins.com</a>
     </div>
+
+
 
 
   </div>
 </section>
 <!-- End Promo Block -->
 
+<!-- Modal Youtube window -->
+<div class="modal fade" id="libc-promo-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-body">
+              <!-- now form -->
+              <div style="">
+                <iframe src="https://player.vimeo.com/video/211472019" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
+<!-- End Youtube modal window -->
 
 <!-- Icon Blocks -->
 <section class="g-py-100">
@@ -280,11 +297,18 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+<script  src="./js/unify_libs/used/custombox/custombox.min.js"></script>
+
 <!-- Start Template JS -->
 <script src="./js/unify_libs/used/hs.core.js"></script>
 <script src="./js/unify_libs/used/hs.hamburgers.js"></script>
 <script src="./js/unify_libs/used/hs.header.js"></script>
+
+<script  src="./js/unify_libs/used/hs.modal-window.js"></script>
+
 <!-- Stop Template JS -->
+
+
 
 
 <!-- Second Piwik script -->
@@ -308,4 +332,11 @@ $( document ).ready(function() {
   $.HSCore.components.HSHeader.init($('#js-header'));
   $.HSCore.helpers.HSHamburgers.init('.hamburger');
 });
+</script>
+
+<script >
+$( document ).ready(function() {
+    // initialization of popups
+    $.HSCore.components.HSModalWindow.init('[data-modal-target]');
+  });
 </script>
