@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/template/animate.css">
     <link rel="stylesheet" href="./css/template/dzsparallaxer.css">
-    <link rel="stylesheet" href="./css/template/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/template/hamburgers.min.css">
     <link rel="stylesheet" href="./css/template/hs.megamenu.css">
     <link rel="stylesheet" href="./css/template/jquery.fancybox.min.css">
@@ -152,7 +152,7 @@
     </div>
 
     <div class="">
-    	<a href="#" class="js-go-to btn u-btn-outline-white g-min-width-170 g-color-white g-bg-white-opacity-0_1 g-color-black--hover g-bg-white--hover g-font-weight-600 text-uppercase rounded g-px-30 g-py-13 mx-3 g-mb-30" data-toggle="modal" data-target="#libc-promo-modal-lg">Watch their video</a>
+    	<a href="#" class="js-go-to btn u-btn-outline-white g-min-width-170 g-color-white g-bg-white-opacity-0_1 g-color-black--hover g-bg-white--hover g-font-weight-600 text-uppercase rounded g-px-30 g-py-13 mx-3 g-mb-30" data-toggle="modal" data-target="#libc-promo-modal-lg">Watch the promo video</a>
       <a class="js-go-to btn u-btn-outline-white g-min-width-170 g-color-white g-bg-white-opacity-0_1 g-color-black--hover g-bg-white--hover g-font-weight-600 text-uppercase rounded g-px-30 g-py-13 mx-3 g-mb-30" href="https://liberalcoins.com">Visit Liberalcoins.com</a>
     </div>
 
@@ -178,6 +178,9 @@
 </div>
 <!-- End Youtube modal window -->
 
+<hr class="g-brd-gray-light-v4 my-0">
+
+<div class="g-bg-secondary">
 <!-- Icon Blocks -->
 <section class="g-py-100">
   <div class="container">
@@ -221,6 +224,43 @@
   </div>
 </section>
 <!-- End Icon Blocks -->
+</div>
+
+<section id="main" class="container-fluid g-px-30 g-pt-100 g-pb-70" style="padding-top: 40px !important;">
+	<!-- Heading -->
+	<div class="text-center mx-auto g-max-width-645 g-mb-70">
+		<h2 class="h2 g-color-black text-uppercase g-font-weight-600 mb-4"><span class="g-color-blue what_used_currency">Buy Litecoin</span></h2>
+    <p class="g-color-gray-dark-v4 g-font-size-16 g-line-height-1_8 mb-0">Below you can find a selection of ads to <strong class="g-color-gray-dark-v2 g-font-weight-600">buy Litecoin</strong> or <strong class="g-color-gray-dark-v2 g-font-weight-600">sell Litecoin</strong> on <a href="https://liberalcoins.com">Liberalcoins.com</a>. To view more ads please visit liberalcoins.</p>
+	</div>
+
+
+	<!-- End Heading -->
+  <div class="container content">
+    <div class="table-responsive">
+      <table class="table home_show_currency_table">
+        <thead>
+          <tr class="thead-inverse">
+            <th>User (Rating)</th>
+            <th class="">Payment Method</th>
+            <th>Price per LTC</th>
+            <th>Trade</th>
+          </tr>
+        </thead>
+
+        <tbody class="home_ads_show">
+
+
+
+        </tbody>
+      </table>
+
+      <div class="new_load_cs col-md-12">
+        <i class="fa fa-spinner fa-5x fa-pulse" aria-hidden="true"></i>
+        <p style="font-size: 2em;margin: .67em 0;letter-spacing: -2px;text-align: center;line-height: 1;">We are currently loading new ads, please wait</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <hr class="g-brd-gray-light-v4 my-0">
 
@@ -291,7 +331,7 @@
 
 </html>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
@@ -321,4 +361,64 @@ $( document ).ready(function() {
     // initialization of popups
     $.HSCore.components.HSModalWindow.init('[data-modal-target]');
   });
+</script>
+
+<script>
+$( document ).ready(function() {
+  var country_code = 'GB'
+  var country="United Kingdom"
+  $.get("http://ip-api.com/json", function(response) {
+    country_code= response.countryCode;
+    country= response.country;
+    getLiberalcoinsList(country_code)
+  }, "jsonp");
+
+
+});
+
+function getLiberalcoinsList(country_code){
+  $.ajax({
+      type: "GET",
+      url: "https://liberalcoins.com/country_show/" + country_code + "-Litecoin.json",
+      beforeSend: function(){
+        loadNewAdsHome();
+      },
+      success: function(data){
+        console.log('loading2');
+        $('.new_load_cs').hide();
+        $('.home_ads_show').show();
+        $('.home_ads_show').empty();
+        var array = data.ads.ads
+        for (var i = 0; i < array.length; i++) {
+          getCurrentAds(array[i]);
+        }
+      }
+    });
+}
+
+function loadNewAdsHome() {
+    $('.home_ads_show').hide();
+    $('.new_load_cs').show();
+    var newLoadSign = "<div class='margin-top'";
+  }
+
+function getCurrentAds(ad) {
+  var usr = "<tr>" + addUserTextAndLink(ad.username, ad.rating);
+  var payment = addAdTextAndLink(ad.payment_method, ad.ad_id);
+  var price = addAdTextAndLink(ad.ad_price + " " + ad.currency, ad.ad_id);
+  var trade = callToAction(ad.ad_id) + "</tr>"
+  $('.home_ads_show').append(usr + payment + price + trade)
+}
+
+function addUserTextAndLink(username, feedback){
+  return "<td><a href='https://liberalcoins.com/user/" + username +"'>" + username + " (" + feedback +"%)</a></td>"
+}
+
+function addAdTextAndLink(text, link_id){
+  return "<td><a href=" + "https://liberalcoins.com/advertisements/" + link_id + ">" + text + "</a></td>"
+}
+
+function callToAction(link_id){
+  return "<td><form target='_blank' class='button_to' method='get' action='https://liberalcoins.com/advertisements/" + link_id + "'><input class='btn u-btn-blue btc_add_button' type='submit' value='Buy'></form></td>"
+}
 </script>

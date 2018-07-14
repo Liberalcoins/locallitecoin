@@ -1,20 +1,27 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.navbar-nav li a{
+  color: #232049 !important;
+}
 
+.thead-inverse th {
+  color: #fff;
+  background-color: #292b2c;
+}
 
-  .navbar-nav li a{
-    color: #232049 !important;
-  }
+.home_show_currency_table th {
+  text-align: center;
+}
+
+.home_show_currency_table td {
+    text-align: center;
+}
+
+table td a{
+  font-size: 1.2rem;
+  color: #3498db;
+}
+
+.new_load_cs{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
